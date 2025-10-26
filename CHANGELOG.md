@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/Craankism/calc/compare/v1.1.0...v1.1.1) (2025-10-26)
+
+
+### Bug Fixes
+
+* changes to workflow ([fa38006](https://github.com/Craankism/calc/commit/fa38006c6db7655ef4b2a2829498f5e18e54a16d))
+* fix to workflow ([f47bc55](https://github.com/Craankism/calc/commit/f47bc55afc686c4b3a6b495599466538dd7fb04e))
+
 ## [1.1.0](https://github.com/Craankism/calc/compare/v1.0.0...v1.1.0) (2025-10-26)
 
 
