@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/Craankism/calc/compare/v1.1.1...v1.1.2) (2025-10-26)
+
+
+### Bug Fixes
+
+* Refactor workflow configuration ([#10](https://github.com/Craankism/calc/issues/10)) ([24e68ed](https://github.com/Craankism/calc/commit/24e68ed72bdd5cae6755d51fd266ad0faee4b796))
+
 ## [1.1.1](https://github.com/Craankism/calc/compare/v1.1.0...v1.1.1) (2025-10-26)
 
 
