@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.4](https://github.com/Craankism/calc/compare/v1.1.3...v1.1.4) (2025-10-26)
+
+
+### Bug Fixes
+
+* removed comments ([#14](https://github.com/Craankism/calc/issues/14)) ([0b6721d](https://github.com/Craankism/calc/commit/0b6721dfa058669f4382c1aebe0dee685ccd306b))
+
+## [1.1.3](https://github.com/Craankism/calc/compare/v1.1.2...v1.1.3) (2025-10-26)
+
+
+### Bug Fixes
+
+* repair please ([#12](https://github.com/Craankism/calc/issues/12)) ([6780f7d](https://github.com/Craankism/calc/commit/6780f7d0e53dee4d63b1cf3aadfc2b2212b7e8d8))
+
 ## [1.1.2](https://github.com/Craankism/calc/compare/v1.1.1...v1.1.2) (2025-10-26)
 
 
