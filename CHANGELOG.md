@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.6](https://github.com/Craankism/calc/compare/v1.1.5...v1.1.6) (2025-10-31)
+
+
+### Bug Fixes
+
+* loop for endless calculation with result ([#21](https://github.com/Craankism/calc/issues/21)) ([12f6ae6](https://github.com/Craankism/calc/commit/12f6ae62cb68df01a4a0ce07eaf6510417901c78))
+
 ## [1.1.5](https://github.com/Craankism/calc/compare/v1.1.4...v1.1.5) (2025-10-31)
 
 
