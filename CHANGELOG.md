@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/Craankism/calc/compare/v1.1.4...v1.1.5) (2025-10-31)
+
+
+### Bug Fixes
+
+* change to Input request order and flow ([#18](https://github.com/Craankism/calc/issues/18)) ([46bd721](https://github.com/Craankism/calc/commit/46bd72127f311c245342b327bbecac3d17ebd735))
+
 ## [1.1.4](https://github.com/Craankism/calc/compare/v1.1.3...v1.1.4) (2025-10-26)
 
 
