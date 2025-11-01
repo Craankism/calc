@@ -1,31 +1,57 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 )
 
 func main() {
-	var num1, num2 float64
+	var num1, num2, result float64
 	var operator string
-	var result float64
 	firstRun := true
+	scanner := bufio.NewScanner(os.Stdin)
 
 	for {
 		//first number or previous result
-		if firstRun { 
+		if firstRun {
 		fmt.Println("Enter number: ")
-		fmt.Scan(&num1)
+		scanner.Scan()
+		fmt.Sscan(scanner.Text(), &num1)
+		//clear calculator
+		if scanner.Text() == "c" {
+			fmt.Println("Calculator cleared.")
+			result = 0
+			firstRun = true
+			continue
+		}
 		firstRun = false
 		} else {
 			num1 = result
 		}
 		//operator
 		fmt.Println("Enter operator: ")
-		fmt.Scan(&operator)
+		scanner.Scan()
+		//clear calculator
+		if scanner.Text() == "c" {
+			fmt.Println("Calculator cleared.")
+			result = 0
+			firstRun = true
+			continue
+		} else {
+			operator = scanner.Text()
+		}
 		//second number
 		fmt.Println("Enter number: ")
-		fmt.Scan(&num2)
-		
+		scanner.Scan()
+		fmt.Sscan(scanner.Text(), &num2)
+		//clear calculator
+		if scanner.Text() == "c" {
+			fmt.Println("Calculator cleared.")
+			result = 0
+			firstRun = true
+			continue
+		}
 
 		//Operator check and calculation
 		switch operator {
