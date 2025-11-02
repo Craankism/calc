@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Craankism/calc/compare/v1.2.1...v1.3.0) (2025-11-02)
+
+
+### Features
+
+* serve and handle  http with style.css and index.html ([#29](https://github.com/Craankism/calc/issues/29)) ([a34a382](https://github.com/Craankism/calc/commit/a34a382462b3dde3359f5541dd4ab3c9e66a7dc5))
+
 ## [1.2.1](https://github.com/Craankism/calc/compare/v1.2.0...v1.2.1) (2025-11-02)
 
 
