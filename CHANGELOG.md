@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Craankism/calc/compare/v1.1.6...v1.2.0) (2025-11-01)
+
+
+### Features
+
+* add calculator reset ([#23](https://github.com/Craankism/calc/issues/23)) ([903c04f](https://github.com/Craankism/calc/commit/903c04fb36b1b25b18e42e4de18637671b1bc1fe))
+
 ## [1.1.6](https://github.com/Craankism/calc/compare/v1.1.5...v1.1.6) (2025-10-31)
 
 
