@@ -4,10 +4,11 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"math/big"
 )
 
 func main() {
-	var num1, num2, result float64
+	var num1, num2, result big.Float
 	var operator string
 	firstRun := true
 	scanner := bufio.NewScanner(os.Stdin)
@@ -21,7 +22,7 @@ func main() {
 		//clear calculator
 		if scanner.Text() == "c" {
 			fmt.Println("Calculator cleared.")
-			result = 0
+			result.SetFloat64(0)
 			firstRun = true
 			continue
 		}
@@ -35,7 +36,7 @@ func main() {
 		//clear calculator
 		if scanner.Text() == "c" {
 			fmt.Println("Calculator cleared.")
-			result = 0
+			result.SetFloat64(0)
 			firstRun = true
 			continue
 		} else {
@@ -48,7 +49,7 @@ func main() {
 		//clear calculator
 		if scanner.Text() == "c" {
 			fmt.Println("Calculator cleared.")
-			result = 0
+			result.SetFloat64(0)
 			firstRun = true
 			continue
 		}
@@ -56,18 +57,18 @@ func main() {
 		//Operator check and calculation
 		switch operator {
 			case "+":
-				result = num1 + num2
+				result.Add(&num1, &num2)
 			case "-":
-				result = num1 - num2
+				result.Sub(&num1, &num2)
 			case "*":
-				result = num1 * num2
+				result.Mul(&num1, &num2)
 			case "/":
-				result = num1 / num2
-				if num2 == 0 {
+				result.Quo(&num1, &num2)
+				if num2.Cmp(big.NewFloat(0)) == 0 {
 					fmt.Println("Error: Division by zero")
 					continue
 				}
 		}
-		fmt.Printf("Result: %g\n", result)
+		fmt.Printf("Result: %s\n", result.String())
 	}
 }
