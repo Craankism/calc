@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"math/big"
+	"net/http"
 )
 
 func main() {
@@ -12,6 +13,13 @@ func main() {
 	var operator string
 	firstRun := true
 	scanner := bufio.NewScanner(os.Stdin)
+
+	//local host
+	http.Handle("/calc/static/", http.StripPrefix("/calc/static/", http.FileServer(http.Dir("static"))))
+	http.HandleFunc("/calc/", func(w http.ResponseWriter, r *http.Request){
+		http.ServeFile(w, r, "index.html")
+	})
+	http.ListenAndServe(":8080", nil)
 
 	for {
 		//first number or previous result
