@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Craankism/calc/compare/v1.2.0...v1.2.1) (2025-11-02)
+
+
+### Bug Fixes
+
+* add big package for big numbers ([#25](https://github.com/Craankism/calc/issues/25)) ([04ef49f](https://github.com/Craankism/calc/commit/04ef49fecc95d884d9f5fed6e987ec6297c09bf5))
+
 ## [1.2.0](https://github.com/Craankism/calc/compare/v1.1.6...v1.2.0) (2025-11-01)
 
 
