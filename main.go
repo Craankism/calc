@@ -1,13 +1,36 @@
 package main
 
 import (
-	"bufio"
+	"encoding/json"
 	"fmt"
-	"os"
-	"math/big"
+	"io"
 	"net/http"
 )
 
+type quickmaffs struct {
+	Term string `json:"term"`
+}
+
+func userInput(input quickmaffs) string {
+	fmt.Println(input.Term)
+	return input.Term
+}
+func main() {
+	helloHandler := func(w http.ResponseWriter, req *http.Request) {
+		io.WriteString(w, req.URL.Path)
+	}
+	calcHandler := func(w http.ResponseWriter, req *http.Request) {
+		var qm quickmaffs
+		body, _ := io.ReadAll(req.Body)
+		json.Unmarshal(body, &qm)
+		io.WriteString(w, userInput(qm))
+	}
+	http.HandleFunc("/hello", helloHandler)
+	http.HandleFunc("/calc", calcHandler)
+	http.ListenAndServe(":8080", nil)
+}
+
+/*
 func main() {
 	var num1, num2, result big.Float
 	var operator string
@@ -79,4 +102,4 @@ func main() {
 		}
 		fmt.Printf("Result: %s\n", result.String())
 	}
-}
+}*/
