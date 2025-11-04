@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Craankism/calc/compare/v1.3.0...v1.4.0) (2025-11-04)
+
+
+### Features
+
+* refactor to server ([#31](https://github.com/Craankism/calc/issues/31)) ([4dd7051](https://github.com/Craankism/calc/commit/4dd705187dce0b8898814105e7a598a1a07f5ffa))
+
 ## [1.3.0](https://github.com/Craankism/calc/compare/v1.2.1...v1.3.0) (2025-11-02)
 
 
