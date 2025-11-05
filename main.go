@@ -16,17 +16,24 @@ func userInput(input quickmaffs) string {
 	return input.Term
 }
 func main() {
-	helloHandler := func(w http.ResponseWriter, req *http.Request) {
-		io.WriteString(w, req.URL.Path)
-	}
-	calcHandler := func(w http.ResponseWriter, req *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "index.html")
+	})
+
+	calcHandler := func(w http.ResponseWriter, r *http.Request) {
+		if r.Method == "POST" {
+			r.ParseForm()
+			input := r.FormValue("input")
+			fmt.Printf("Input: %s", input)
+		}
+		http.ServeFile(w, r, "index.html")
 		var qm quickmaffs
-		body, _ := io.ReadAll(req.Body)
+		body, _ := io.ReadAll(r.Body)
 		json.Unmarshal(body, &qm)
 		io.WriteString(w, userInput(qm))
 	}
-	http.HandleFunc("/hello", helloHandler)
 	http.HandleFunc("/calc", calcHandler)
+
 	http.ListenAndServe(":8080", nil)
 }
 
