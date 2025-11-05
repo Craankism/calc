@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/Craankism/calc/compare/v1.4.0...v1.5.0) (2025-11-05)
+
+
+### Features
+
+* add html input bar and listen for POST ([#33](https://github.com/Craankism/calc/issues/33)) ([1889ef7](https://github.com/Craankism/calc/commit/1889ef7217f3f335dff9945514a0c4573bd3d7e7))
+
 ## [1.4.0](https://github.com/Craankism/calc/compare/v1.3.0...v1.4.0) (2025-11-04)
 
 
