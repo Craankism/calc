@@ -7,9 +7,32 @@
 </head>
 
 <body>
-  <form action="/calc" method="POST">
-    <label for="input">calculator:</label><br>
-    <input type="text" name="input">
+  <form class="form">
+    <label for="term">calculator:</label><br>
+    <input type="text" name="term">
     <input type="submit" value="=">
   </form>
+
+  <script>
+    const formEl = document.querySelector('.form');
+
+    formEl.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const formData = new FormData(formEl);
+      const data = Object.fromEntries(formData);
+
+      fetch('http://localhost:8080/calc', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then(res => res.json())
+        .then(data => console.log(data))
+    });
+  </script>
+
 </body>
+
+</html>

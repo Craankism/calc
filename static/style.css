@@ -1,7 +1,9 @@
 /*Background Color */
 body {
     background-color: #000000;
+    color: #ffffff
 }
+
 /*Headline */
 h1 {
     color: rgb(116, 0, 0);
