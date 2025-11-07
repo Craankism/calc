@@ -19,22 +19,32 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "index.html")
 	})
+	http.HandleFunc("/static/style.css", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "static/style.css")
+	})
 
 	calcHandler := func(w http.ResponseWriter, r *http.Request) {
-		if r.Method == "POST" {
-			r.ParseForm()
-			input := r.FormValue("input")
-			fmt.Printf("Input: %s", input)
-		}
-		http.ServeFile(w, r, "index.html")
 		var qm quickmaffs
-		body, _ := io.ReadAll(r.Body)
-		json.Unmarshal(body, &qm)
-		io.WriteString(w, userInput(qm))
+		body, err := io.ReadAll(r.Body)
+		if err != nil {
+			fmt.Println(err)
+		}
+		err = json.Unmarshal(body, &qm)
+		if err != nil {
+			fmt.Println(err)
+		}
+		_, err = io.WriteString(w, userInput(qm))
+		if err != nil {
+			fmt.Println(err)
+		}
 	}
 	http.HandleFunc("/calc", calcHandler)
 
-	http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
+
 }
 
 /*
