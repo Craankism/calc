@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/Craankism/calc/compare/v1.5.0...v1.5.1) (2025-11-07)
+
+
+### Bug Fixes
+
+* add script in html for requests and response ([#35](https://github.com/Craankism/calc/issues/35)) ([9603063](https://github.com/Craankism/calc/commit/96030636a829f42ff9a8c409733eeab7b5242296))
+
 ## [1.5.0](https://github.com/Craankism/calc/compare/v1.4.0...v1.5.0) (2025-11-05)
 
 
