@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/Craankism/calc/compare/v1.5.1...v1.6.0) (2025-11-08)
+
+
+### Features
+
+* result send to client ([#37](https://github.com/Craankism/calc/issues/37)) ([f1038bf](https://github.com/Craankism/calc/commit/f1038bfbfc5ee43683624a79ea487539e77a8535))
+
 ## [1.5.1](https://github.com/Craankism/calc/compare/v1.5.0...v1.5.1) (2025-11-07)
 
 
