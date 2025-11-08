@@ -7,14 +7,32 @@ import (
 	"net/http"
 )
 
+/*
+	{
+		"term": "2+2"
+	}
+*/
 type quickmaffs struct {
 	Term string `json:"term"`
 }
 
-func userInput(input quickmaffs) string {
-	fmt.Println(input.Term)
-	return input.Term
+/*
+	{
+		"result": "4"
+	}
+*/
+type calcResponse struct {
+	Result float64 `json:"result"`
 }
+
+func userInput(input quickmaffs) calcResponse {
+	calcResponseObject := calcResponse{
+		Result: 69,
+	}
+	fmt.Println(input.Term)
+	return calcResponseObject
+}
+
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "index.html")
@@ -33,7 +51,11 @@ func main() {
 		if err != nil {
 			fmt.Println(err)
 		}
-		_, err = io.WriteString(w, userInput(qm))
+		data, err := json.Marshal(userInput(qm))
+		if err != nil {
+			fmt.Println(err)
+		}
+		_, err = w.Write(data)
 		if err != nil {
 			fmt.Println(err)
 		}
