@@ -23,8 +23,3 @@ func parser(input string) (numbers []string, operators []string) {
 	//step 7: combine numbers like "42" instead of "4 2"
 	return numbers, operators
 }
-
-func main() {
-	numbers, operators := parser("42+17+1")
-	fmt.Println(numbers, operators)
-}
