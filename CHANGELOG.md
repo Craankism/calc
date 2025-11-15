@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/Craankism/calc/compare/v1.6.0...v1.7.0) (2025-11-11)
+
+
+### Features
+
+* add parser to build stack ([#39](https://github.com/Craankism/calc/issues/39)) ([2f0f3e8](https://github.com/Craankism/calc/commit/2f0f3e8c8e7ed0cd8b0839341084e29ad3e2d980))
+
 ## [1.6.0](https://github.com/Craankism/calc/compare/v1.5.1...v1.6.0) (2025-11-08)
 
 
