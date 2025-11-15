@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/Craankism/calc/compare/v1.7.0...v1.8.0) (2025-11-15)
+
+
+### Features
+
+* add simple calculation ([#42](https://github.com/Craankism/calc/issues/42)) ([3de26c9](https://github.com/Craankism/calc/commit/3de26c9e7799d94ba9a70fcbd98d7570677333e4))
+
 ## [1.7.0](https://github.com/Craankism/calc/compare/v1.6.0...v1.7.0) (2025-11-11)
 
 
