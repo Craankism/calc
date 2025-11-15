@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/Craankism/calc/compare/v1.8.0...v1.8.1) (2025-11-15)
+
+
+### Bug Fixes
+
+* fixing broken code cause of merge ([#44](https://github.com/Craankism/calc/issues/44)) ([8327a08](https://github.com/Craankism/calc/commit/8327a08098a9b33607542a3ed4c8c1f5483a91b1))
+
 ## [1.8.0](https://github.com/Craankism/calc/compare/v1.7.0...v1.8.0) (2025-11-15)
 
 
