@@ -1,29 +1,29 @@
 package main
 
-// import (
-// 	"encoding/json"
-// 	"fmt"
-// 	"io"
-// 	"net/http"
-// )
+import (
+	"encoding/json"
+	"fmt"
+	"io"
+	"net/http"
+)
 
-// /*
-// 	{
-// 		"term": "2+2"
-// 	}
-// */
-// type quickmaffs struct {
-// 	Term string `json:"term"`
-// }
+/*
+	{
+		"term": "2+2"
+	}
+*/
+type quickmaffs struct {
+	Term string `json:"term"`
+}
 
-// /*
-// 	{
-// 		"result": "4"
-// 	}
-// */
-// type calcResponse struct {
-// 	Result float64 `json:"result"`
-// }
+/*
+	{
+		"result": "4"
+	}
+*/
+type calcResponse struct {
+	Result float64 `json:"result"`
+}
 
 var lastTerm string
 
@@ -37,9 +37,10 @@ func userInput(input quickmaffs) calcResponse {
 	return calcResponseObject
 }
 
-// 	fmt.Println(input.Term)
-// 	return calcResponseObject
-// }
+	fmt.Println("Input: ", input.Term)
+	fmt.Println("Response: ", calcResponseObject)
+	return calcResponseObject
+}
 
 	calcHandler := func(w http.ResponseWriter, r *http.Request) {
 		var qm quickmaffs
