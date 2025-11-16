@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/Craankism/calc/compare/v1.8.1...v1.8.2) (2025-11-16)
+
+
+### Bug Fixes
+
+* change priority order for operators array ([#46](https://github.com/Craankism/calc/issues/46)) ([5d7c11b](https://github.com/Craankism/calc/commit/5d7c11b461233a9743e848671c58d9b55c02185d))
+
 ## [1.8.1](https://github.com/Craankism/calc/compare/v1.8.0...v1.8.1) (2025-11-15)
 
 
