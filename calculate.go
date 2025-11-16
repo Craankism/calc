@@ -8,7 +8,7 @@ import (
 func calculate() {
 	//call input with numbers and operators from parser
 	numbers, operators := parser(lastTerm)
-	fmt.Println("parser_response: ", numbers, operators)
+	fmt.Println("parser_output: ", numbers, operators)
 
 	//start with first number
 	//result get later updated inside of the loop
@@ -18,18 +18,27 @@ func calculate() {
 	}
 
 	//calculate
-	for i := 0; i < len(operators); i++ {
+	for i := 1; i < len(numbers);  i++ {
 
-		b, err := strconv.Atoi(numbers[i+1])
+		b, err := strconv.Atoi(numbers[i])
 		if err != nil {
 			fmt.Println(err)
 		}
 
-		switch operators[i] {
+		switch operators[i-1] {
 		case "+":
 			result = result + b
 		case "-":
 			result = result - b
+		case "*":
+			result = result * b
+		case "/":
+			result = result / b
+			if b == 0 {
+				fmt.Println("Err: No division with zero!")
+			}
+		default:
+			fmt.Println("Error! Wrong operator")
 		}
 	}
 	fmt.Println("result: ", result)
