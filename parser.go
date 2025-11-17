@@ -1,54 +1,60 @@
 package main
 
-import (
-	"fmt"
-)
-var normalOperators []string
-var specialOperators []string
+var precedence = map[string]int{
+	"+": 1,
+	"-": 1,
+	"*": 2,
+	"/": 2,
+}
 
-func parser(input string) (numbers []string, operators []string) {
+var stack []string
+
+func parser(input string) (output []string) {
 	for i := 0; i < len(input); i++ {
 		//numbers between "0-9"
 		if input[i] >= '0' && input[i] <= '9' {
-			//if number after number
+			//check if number after number
 			num := string(input[i])
 			for i+1 < len(input) && input[i+1] >= '0' && input[i+1] <= '9' {
 				i++
 				num += string(input[i])
 			}
-			//combine numbers
-			numbers = append(numbers, num)			
+			//combine numbers and push to output
+			output = append(output, num)
 
 			//operators "+ - * /"
-		} else if input[i] == '+' || input[i] == '-' {
-			normalOperators = append(normalOperators, string(input[i]))
-		} else if input[i] == '*' || input[i] == '/' {
-			specialOperators = append(specialOperators, string(input[i]))
-		} else {
-			fmt.Println("wrong input")
+		} else if input[i] == '+' || input[i] == '-' || input[i] == '*' || input[i] == '/' {
+			currentOp := string(input[i])
+			//pop operators with higher or equal priority to output
+			for len(stack) > 0 && precedence[stack[len(stack)-1]] >= precedence[currentOp] {
+				//pop operator to output from last index of the stack
+				output = append(output, stack[len(stack)-1])
+				//remove operator from last index of stack
+				stack = stack[:len(stack)-1]
+
+			}
+			stack = append(stack, currentOp)
 		}
 		operators = append(normalOperators, specialOperators...)
 	}
-	return numbers, operators
+	//pop remaining operators from stack (LIFO = Last-In-First-Out)
+	for len(stack) > 0 {
+		output = append(output, stack[len(stack)-1])
+		stack = stack[:len(stack)-1]
+	}
+	return output
 }
+
 /*
-Step 4: Evaluate RPN
-
-We evaluate from left to right using a stack:
-
-Push 22 → stack [22]
-
-Push 3 → stack [22, 3]
-
-Operator * → pop 22, 3, compute 22*3=66, push 66 → stack [66]
-
-Push 4 → stack [66, 4]
-
-Push 6 → stack [66, 4, 6]
-
-Operator * → pop 4,6, compute 4*6=24, push 24 → stack [66, 24]
-
-Operator + → pop 66,24, compute 66+24=90, push 90 → stack [90]
-
-✅ Result: 90
+Example input: 22*3+4*6
+| Token | Aktion                                                                    | Output         | Stack  |
+| ----- | ------------------------------------------------------------------------- | -------------- | ------ |
+| 22    | Zahl → in Ausgabe                                                         | 22             |        |
+| *     | Stack leer → `*` auf Stack                                                | 22             | *      |
+| 3     | Zahl → in Ausgabe                                                         | 22 3           | *      |
+| +     | Hat niedrigere Priorität als `*` → pop `*` in Ausgabe, dann `+` auf Stack | 22 3 *         | +      |
+| 4     | Zahl → in Ausgabe                                                         | 22 3 * 4       | +      |
+| *     | Höhere Priorität als `+` → direkt auf Stack                               | 22 3 * 4       | + *    |
+| 6     | Zahl → in Ausgabe                                                         | 22 3 * 4 6     | + *    |
+| Ende  | Stack entleeren                                                           | 22 3 * 4 6 * + | (leer) |
 */
