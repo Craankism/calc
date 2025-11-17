@@ -7,9 +7,8 @@ var precedence = map[string]int{
 	"/": 2,
 }
 
-var stack []string
-
 func parser(input string) (output []string) {
+	var stack []string
 	for i := 0; i < len(input); i++ {
 		//numbers between "0-9"
 		if input[i] >= '0' && input[i] <= '9' {
