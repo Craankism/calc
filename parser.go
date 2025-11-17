@@ -35,6 +35,7 @@ func parser(input string) (output []string) {
 			}
 			stack = append(stack, currentOp)
 		}
+		operators = append(normalOperators, specialOperators...)
 	}
 	//pop remaining operators from stack (LIFO = Last-In-First-Out)
 	for len(stack) > 0 {
