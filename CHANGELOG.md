@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.3](https://github.com/Craankism/calc/compare/v1.8.2...v1.8.3) (2025-11-17)
+
+
+### Bug Fixes
+
+* change parser to shunting yard algorithm ([#48](https://github.com/Craankism/calc/issues/48)) ([f8c772c](https://github.com/Craankism/calc/commit/f8c772c25be4cc4d71d3e1e27b995cfa92bfa1db))
+
 ## [1.8.2](https://github.com/Craankism/calc/compare/v1.8.1...v1.8.2) (2025-11-16)
 
 
