@@ -6,12 +6,12 @@ import (
 	"strings"
 )
 
-func calculate() int {
+func calculate() float64 {
 	output := parser(lastTerm)
 	fmt.Println(output)
 
 	var stack []string
-	var result int
+	var result float64
 
 	for i := 0; i < len(output); i++ {
 		//numbers get added to stack
@@ -21,11 +21,11 @@ func calculate() int {
 			//set operator and calculate
 		} else {
 			//set a and b to last 2 positions stack
-			a, err := strconv.Atoi(string(stack[len(stack)-2]))
+			a, err := strconv.ParseFloat(stack[len(stack)-2], 64)
 			if err != nil {
 				fmt.Println(err)
 			}
-			b, err := strconv.Atoi(string(stack[len(stack)-1]))
+			b, err := strconv.ParseFloat(stack[len(stack)-1], 64)
 			if err != nil {
 				fmt.Println(err)
 			}
@@ -47,12 +47,12 @@ func calculate() int {
 			}
 			//remove last two numbers from stack and add result to stack
 			stack = stack[:len(stack)-2]
-			stack = append(stack, strconv.Itoa(result))
+			stack = append(stack, strconv.FormatFloat(result, 'f', -1, 64))
 		}
 	}
 	if len(output) == 0 && len(stack) == 1 {
 		stackStr := strings.Join(stack, "")
-		result, err := strconv.Atoi(stackStr)
+		result, err := strconv.ParseFloat(stackStr, 64)
 		if err != nil {
 			fmt.Println(err)
 		}
