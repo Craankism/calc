@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/Craankism/calc/compare/v1.8.3...v1.9.0) (2025-11-19)
+
+
+### Features
+
+* add calculation with rpn ([#52](https://github.com/Craankism/calc/issues/52)) ([58cbbf7](https://github.com/Craankism/calc/commit/58cbbf7bbb26eecfaabb7f48e4807bf8e1cf2069))
+
 ## [1.8.3](https://github.com/Craankism/calc/compare/v1.8.2...v1.8.3) (2025-11-17)
 
 
