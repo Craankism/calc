@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/Craankism/calc/compare/v1.9.0...v1.9.1) (2025-11-19)
+
+
+### Bug Fixes
+
+* convert result to float64 from int ([#54](https://github.com/Craankism/calc/issues/54)) ([6e0eeeb](https://github.com/Craankism/calc/commit/6e0eeeb29aceef906aa47e8897d7aba62d16336c))
+
 ## [1.9.0](https://github.com/Craankism/calc/compare/v1.8.3...v1.9.0) (2025-11-19)
 
 
