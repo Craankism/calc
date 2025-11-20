@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/Craankism/calc/compare/v1.9.1...v1.10.0) (2025-11-20)
+
+
+### Features
+
+* display result on html body, center ui and introduce . in parser for comma digits ([#56](https://github.com/Craankism/calc/issues/56)) ([e6a6b8a](https://github.com/Craankism/calc/commit/e6a6b8a226f0845c8f1da4631859ecc9005b0afc))
+
 ## [1.9.1](https://github.com/Craankism/calc/compare/v1.9.0...v1.9.1) (2025-11-19)
 
 
