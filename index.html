@@ -12,6 +12,9 @@
     <input type="text" name="term">
     <input type="submit" value="=">
   </form>
+<h1>
+  Result = 
+</h1>
 
   <script>
     const formEl = document.querySelector('.form');
@@ -29,7 +32,11 @@
         },
         body: JSON.stringify(data)
       }).then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+          const resultEl = document.querySelector('h1');
+          const result = data && (data.result || data.value || JSON.stringify(data));
+          resultEl.textContent = 'Result = ' + result;
+        });
     });
   </script>
 

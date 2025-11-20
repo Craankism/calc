@@ -12,9 +12,9 @@ func parser(input string) (output []string) {
 	for i := 0; i < len(input); i++ {
 		//numbers between "0-9"
 		if input[i] >= '0' && input[i] <= '9' {
-			//check if number after number
+			//check if number after number or for . after number
 			num := string(input[i])
-			for i+1 < len(input) && input[i+1] >= '0' && input[i+1] <= '9' {
+			for i+1 < len(input) && input[i+1] >= '0' && input[i+1] <= '9' || i+1 < len(input) && input[i+1] == '.' {
 				i++
 				num += string(input[i])
 			}
