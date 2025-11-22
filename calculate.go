@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func calculate() float64 {
+func calculate() string {
 	output := parser(lastTerm)
 	fmt.Println(output)
 
@@ -52,14 +52,13 @@ func calculate() float64 {
 	}
 	if len(output) == 0 && len(stack) == 1 {
 		stackStr := strings.Join(stack, "")
-		result, err := strconv.ParseFloat(stackStr, 64)
+		_, err := strconv.ParseFloat(stackStr, 64)
 		if err != nil {
 			fmt.Println(err)
 		}
-		return result
 	}
 	fmt.Println("Result: ", result)
-	return result
+	return strconv.FormatFloat(result, 'f', -1, 64)
 }
 
 /*pop remaining operators from stack (LIFO = Last-In-First-Out)

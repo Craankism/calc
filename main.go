@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strings"
 )
 
 /*
@@ -22,12 +23,12 @@ type quickmaffs struct {
 	}
 */
 type calcResponse struct {
-	Result float64 `json:"result"`
+	Result string `json:"result"`
 }
 
 var lastTerm string
 
-func userInput(input quickmaffs, result float64) calcResponse {
+func userInput(input quickmaffs, result string) calcResponse {
 	calcResponseObject := calcResponse{
 		Result: result,
 	}
@@ -57,6 +58,7 @@ func main() {
 		//parser to calculate
 		lastTerm = qm.Term
 		result := calculate()
+		result = strings.ReplaceAll(result, ".", ",")
 
 		data, err := json.Marshal(userInput(qm, result))
 		if err != nil {
