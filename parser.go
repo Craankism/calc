@@ -1,5 +1,7 @@
 package main
 
+import "strings"
+
 var precedence = map[string]int{
 	"+": 1,
 	"-": 1,
@@ -9,6 +11,7 @@ var precedence = map[string]int{
 
 func parser(input string) (output []string) {
 	var stack []string
+	input = strings.ReplaceAll(input, ",", ".")
 	for i := 0; i < len(input); i++ {
 		//numbers between "0-9"
 		if input[i] >= '0' && input[i] <= '9' {
