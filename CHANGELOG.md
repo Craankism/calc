@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/Craankism/calc/compare/v1.10.0...v1.10.1) (2025-11-22)
+
+
+### Bug Fixes
+
+* change . to , as decimal seperator ([#58](https://github.com/Craankism/calc/issues/58)) ([5555714](https://github.com/Craankism/calc/commit/5555714ce496b5f1245f4d653776713f0f1adf22))
+
 ## [1.10.0](https://github.com/Craankism/calc/compare/v1.9.1...v1.10.0) (2025-11-20)
 
 
