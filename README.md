@@ -10,3 +10,8 @@ curl -X POST http://localhost:8080/calc \
   -H "Content-Type: application/json" \
   -d '{"term": "3 + 4 * 2"}'
 ```
+
+only for a single shell session
+```bash
+export ENVIROMENT=dev
+```

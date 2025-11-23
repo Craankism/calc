@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>simple calculator</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+  <form class="form" action="#">
+    <label for="term">calculator:</label><br>
+    <input type="text" name="term">
+    <input type="submit" value="=">
+  </form>
+<h1>
+  
+</h1>
+
+  <script>
+    const formEl = document.querySelector('.form');
+
+    formEl.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const formData = new FormData(formEl);
+      const data = Object.fromEntries(formData);
+
+      fetch('http://localhost:8080/calc', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then(res => res.json())
+        .then(data => {
+          const resultEl = document.querySelector('h1');
+          const result = data && (data.result || data.value || JSON.stringify(data));
+          resultEl.textContent = 'Result = ' + result;
+        });
+    });
+  </script>
+
+</body>
+
+</html>
