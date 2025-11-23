@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"strings"
 )
 
@@ -38,9 +39,16 @@ func userInput(input quickmaffs, result string) calcResponse {
 }
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "index.html")
-	})
+	env := os.Getenv("ENVIROMENT")
+	if env == "dev" {
+		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+			http.ServeFile(w, r, "dev.index.html")
+		})
+	} else if env == "prod" {
+		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+			http.ServeFile(w, r, "index.html")
+		})
+	}
 	http.HandleFunc("/static/style.css", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "static/style.css")
 	})
