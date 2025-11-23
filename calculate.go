@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-func calculate() string {
-	output := parser(lastTerm)
+func calculate(term string) string {
+	output := parser(term)
 	fmt.Println(output)
 
 	var stack []string
