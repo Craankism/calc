@@ -27,8 +27,6 @@ type calcResponse struct {
 	Result string `json:"result"`
 }
 
-var lastTerm string
-
 func userInput(input quickmaffs, result string) calcResponse {
 	calcResponseObject := calcResponse{
 		Result: result,
@@ -54,6 +52,9 @@ func main() {
 	})
 
 	calcHandler := func(w http.ResponseWriter, r *http.Request) {
+		// Limit request body size to 100KB to prevent memory exhaustion
+		r.Body = http.MaxBytesReader(w, r.Body, 100*1024)
+
 		var qm quickmaffs
 		body, err := io.ReadAll(r.Body)
 		if err != nil {
@@ -61,20 +62,35 @@ func main() {
 		}
 		err = json.Unmarshal(body, &qm)
 		if err != nil {
-			fmt.Println(err)
+			w.WriteHeader(http.StatusBadRequest)
+			fmt.Fprintf(w, `{"error": "invalid JSON"}`)
+			fmt.Println("JSON unmarshal error:", err)
+			return
 		}
+
+		// Validate input before processing
+		if !validateInput(qm.Term) {
+			w.WriteHeader(http.StatusBadRequest)
+			fmt.Fprintf(w, `{"error": "invalid characters in expression"}`)
+			fmt.Println("Invalid input:", qm.Term)
+			return
+		}
+
 		//parser to calculate
-		lastTerm = qm.Term
-		result := calculate()
+		result := calculate(qm.Term)
 		result = strings.ReplaceAll(result, ".", ",")
 
+		w.Header().Set("Content-Type", "application/json")
 		data, err := json.Marshal(userInput(qm, result))
 		if err != nil {
-			fmt.Println(err)
+			w.WriteHeader(http.StatusInternalServerError)
+			fmt.Fprintf(w, `{"error": "failed to marshal response"}`)
+			fmt.Println("JSON marshal error:", err)
+			return
 		}
 		_, err = w.Write(data)
 		if err != nil {
-			fmt.Println(err)
+			fmt.Println("Error writing response:", err)
 		}
 	}
 	http.HandleFunc("/calc", calcHandler)

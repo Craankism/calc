@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"regexp"
+	"strings"
+)
 
 var precedence = map[string]int{
 	"+": 1,
@@ -9,7 +12,24 @@ var precedence = map[string]int{
 	"/": 2,
 }
 
+// validateInput checks if input contains only valid characters: digits, operators, decimal point, and spaces
+func validateInput(input string) bool {
+	// Whitelist: digits (0-9), operators (+, -, *, /), decimal point (.), and spaces
+	validPattern := regexp.MustCompile(`^[0-9+\-*/.\\s]*$`)
+	if !validPattern.MatchString(input) {
+		return false
+	}
+	// Check for max length to prevent DoS
+	if len(input) > 1024 {
+		return false
+	}
+	return true
+}
+
 func parser(input string) (output []string) {
+	if !validateInput(input) {
+		return nil
+	}
 	var stack []string
 	input = strings.ReplaceAll(input, ",", ".")
 	for i := 0; i < len(input); i++ {
