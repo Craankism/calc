@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.1](https://github.com/Craankism/calc/compare/v1.11.0...v1.11.1) (2025-11-23)
+
+
+### Bug Fixes
+
+* add input validation ([#63](https://github.com/Craankism/calc/issues/63)) ([fcbe66e](https://github.com/Craankism/calc/commit/fcbe66e5970ce7838ea39427fcafc3f7070253ba))
+
 ## [1.11.0](https://github.com/Craankism/calc/compare/v1.10.1...v1.11.0) (2025-11-23)
 
 
