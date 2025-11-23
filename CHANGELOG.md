@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.11.0](https://github.com/Craankism/calc/compare/v1.10.1...v1.11.0) (2025-11-23)
+
+
+### Features
+
+* add two enviroments for development and production ([#60](https://github.com/Craankism/calc/issues/60)) ([9b1a1db](https://github.com/Craankism/calc/commit/9b1a1dbcad3114b90b5d52b4c2707000f320a772))
+
+
+### Bug Fixes
+
+* add gitignore ([#62](https://github.com/Craankism/calc/issues/62)) ([3073315](https://github.com/Craankism/calc/commit/30733150a7bf828975485effb7db21d0027f69f6))
+
 ## [1.10.1](https://github.com/Craankism/calc/compare/v1.10.0...v1.10.1) (2025-11-22)
 
 
