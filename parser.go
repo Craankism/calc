@@ -14,8 +14,8 @@ var precedence = map[string]int{
 
 // validateInput checks if input contains only valid characters: digits, operators, decimal point, and spaces
 func validateInput(input string) bool {
-	// Whitelist: digits (0-9), operators (+, -, *, /), decimal point (.), and spaces
-	validPattern := regexp.MustCompile(`^[0-9+\-*/.\\s]*$`)
+	// Whitelist: digits (0-9), operators (+, -, *, /), decimal point (,), and spaces
+	validPattern := regexp.MustCompile(`^[0-9+\-*/,\\s]*$`)
 	if !validPattern.MatchString(input) {
 		return false
 	}
