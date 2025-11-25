@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.3](https://github.com/Craankism/calc/compare/v1.11.2...v1.11.3) (2025-11-25)
+
+
+### Bug Fixes
+
+* add math/big package instead of float64 ([#67](https://github.com/Craankism/calc/issues/67)) ([27e7cc4](https://github.com/Craankism/calc/commit/27e7cc4a53c3f357bf5407c41cec4a8316b1bbb4))
+
 ## [1.11.2](https://github.com/Craankism/calc/compare/v1.11.1...v1.11.2) (2025-11-23)
 
 
