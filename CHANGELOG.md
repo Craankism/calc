@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/Craankism/calc/compare/v1.11.3...v1.12.0) (2025-11-27)
+
+
+### Features
+
+* add dockerfile and dockerignore ([#69](https://github.com/Craankism/calc/issues/69)) ([bf6883d](https://github.com/Craankism/calc/commit/bf6883dd22ff77da6e2ac47550191d322cfabce0))
+
 ## [1.11.3](https://github.com/Craankism/calc/compare/v1.11.2...v1.11.3) (2025-11-25)
 
 
