@@ -12,9 +12,9 @@
     <input type="text" name="term">
     <input type="submit" value="=">
   </form>
-<h1>
-  
-</h1>
+  <h1>
+
+  </h1>
 
   <script>
     const formEl = document.querySelector('.form');
@@ -25,7 +25,7 @@
       const formData = new FormData(formEl);
       const data = Object.fromEntries(formData);
 
-      fetch('http://91.99.142.114:8080/calc', {
+      fetch('/calc', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

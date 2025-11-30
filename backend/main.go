@@ -40,15 +40,15 @@ func main() {
 	env := os.Getenv("ENVIROMENT")
 	if env == "dev" {
 		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			http.ServeFile(w, r, "dev.index.html")
+			http.ServeFile(w, r, "frontend/dev.index.html")
 		})
 	} else if env == "prod" {
 		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			http.ServeFile(w, r, "index.html")
+			http.ServeFile(w, r, "frontend/index.html")
 		})
 	}
-	http.HandleFunc("/static/style.css", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "static/style.css")
+	http.HandleFunc("/frontend/static/style.css", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "frontend/static/style.css")
 	})
 
 	calcHandler := func(w http.ResponseWriter, r *http.Request) {
