@@ -25,16 +25,8 @@ WORKDIR /app
 # Copy the binary from builder
 COPY --from=builder /app/calculator .
 
-# Copy static files
-COPY --from=builder /app/index.html .
-COPY --from=builder /app/dev.index.html .
-COPY --from=builder /app/static/style.css ./static/
-
 # Expose port
 EXPOSE 8080
-
-# Set enviroment to development
-ENV ENVIROMENT=dev
 
 # Run the application
 CMD ["./calculator"]
