@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/Craankism/calc/compare/v1.12.0...v1.13.0) (2025-11-30)
+
+
+### Features
+
+* seperate frontend and backend, dockerfile for each and add dockercompose, add nginx config for relative URL ([#71](https://github.com/Craankism/calc/issues/71)) ([ba2b317](https://github.com/Craankism/calc/commit/ba2b3179c3d1d042727ddb9b66196093355c8410))
+
 ## [1.12.0](https://github.com/Craankism/calc/compare/v1.11.3...v1.12.0) (2025-11-27)
 
 
