@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.1](https://github.com/Craankism/calc/compare/v1.13.0...v1.13.1) (2025-12-04)
+
+
+### Bug Fixes
+
+* remove second index.html and remove port in compose ([#73](https://github.com/Craankism/calc/issues/73)) ([5ca5656](https://github.com/Craankism/calc/commit/5ca5656a54531f57e12f3cd1f7bed3ea0f422b3a))
+
 ## [1.13.0](https://github.com/Craankism/calc/compare/v1.12.0...v1.13.0) (2025-11-30)
 
 
