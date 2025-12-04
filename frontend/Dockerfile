@@ -15,7 +15,6 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # - dev.index.html
 # - static/ (CSS, JS, images)
 COPY index.html /usr/share/nginx/html/index.html
-COPY dev.index.html /usr/share/nginx/html/dev.index.html
 COPY static /usr/share/nginx/html/static
 
 # Expose HTTP port
