@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.1](https://github.com/Craankism/calc/compare/v1.14.0...v1.14.1) (2025-12-07)
+
+
+### Bug Fixes
+
+* correct typo on button ([#77](https://github.com/Craankism/calc/issues/77)) ([07e806e](https://github.com/Craankism/calc/commit/07e806e2ae1a1f1821fa393186eeff81f49bcee9))
+
 ## [1.14.0](https://github.com/Craankism/calc/compare/v1.13.1...v1.14.0) (2025-12-07)
 
 
