@@ -7,14 +7,43 @@
 </head>
 
 <body>
-  <form class="form" action="#">
-    <label for="term">calculator:</label><br>
-    <input type="text" name="term">
-    <input type="submit" value="=">
-  </form>
   <h1>
-
+    Result =
   </h1>
+  <form class="form" action="#">
+    <input type="text" name="term">
+  </form>
+
+  <button id="tech" type="button">PH</button>
+  <button id="tech" type="button"
+    onclick="document.querySelector('input[name=term]').value = ''; document.querySelector('h1').textContent = 'Result =';">C</button>
+  <button id="tech" type="button"
+    onclick="document.querySelector('input[name=term]').value = document.querySelector('input[name=term]').value.slice(0, -1)">&#9003</button>
+  <button id="tech" type="button" onclick="document.querySelector('input[name=term]').value += '/'">/</button>
+  <br>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '7'">7</button>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '8'">8</button>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '9'">3</button>
+  <button id="tech" type="button" onclick="document.querySelector('input[name=term]').value += '*'">*</button>
+  <br>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '4'">4</button>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '5'">5</button>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '6'">6</button>
+  <button id="tech" type="button" onclick="document.querySelector('input[name=term]').value += '-'">-</button>
+  <br>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '1'">1</button>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '2'">2</button>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '3'">3</button>
+  <button id="tech" type="button" onclick="document.querySelector('input[name=term]').value += '+'">+</button>
+  <br>
+  <button type="button">PH</button>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += '0'">0</button>
+  <button type="button" onclick="document.querySelector('input[name=term]').value += ','">,</button>
+  <button id="enter" type="submit"
+    onclick="document.querySelector('.form').dispatchEvent(new Event('submit'));">=</button>
+  <br>
+
+
 
   <script>
     const formEl = document.querySelector('.form');
