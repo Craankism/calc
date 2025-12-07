@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/Craankism/calc/compare/v1.13.1...v1.14.0) (2025-12-07)
+
+
+### Features
+
+* add buttons for calc ui with placeholders ([#75](https://github.com/Craankism/calc/issues/75)) ([472515c](https://github.com/Craankism/calc/commit/472515c2374f68f3dadd30eed3b1052db663a820))
+
 ## [1.13.1](https://github.com/Craankism/calc/compare/v1.13.0...v1.13.1) (2025-12-04)
 
 
