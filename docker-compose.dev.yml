@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    volumes:
+      - .:/code
+  backend:
+    build: ./backend
+
