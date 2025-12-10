@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.2](https://github.com/Craankism/calc/compare/v1.14.1...v1.14.2) (2025-12-10)
+
+
+### Bug Fixes
+
+* add proxy manager ([#79](https://github.com/Craankism/calc/issues/79)) ([ca2cd76](https://github.com/Craankism/calc/commit/ca2cd765ac764ba54dcf54150b0e6be4f2983245))
+
 ## [1.14.1](https://github.com/Craankism/calc/compare/v1.14.0...v1.14.1) (2025-12-07)
 
 
