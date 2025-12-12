@@ -1,9 +1,11 @@
 # calc
-simple calculator on local host website
+simple calculator application for a webserver in go
 
 - simple calculations (no exponents and stuff)
-- basic calculator design (like windows)
+- basic calculator design with buttons (like windows)
 - CI/CD with GitHub Actions (release-please)
+- containerization with docker and docker-compose
+-  
 
 ```bash
 curl -X POST http://localhost:8080/calc \
@@ -11,7 +13,19 @@ curl -X POST http://localhost:8080/calc \
   -d '{"term": "3 + 4 * 2"}'
 ```
 
-only for a single shell session
-```bash
-export ENVIROMENT=dev
-```
+Work Order:
+1. term from website:
+
+
+
+2. Parser:
+
+
+
+3. Caluclation:
+
+
+
+4. result to website
+
+
