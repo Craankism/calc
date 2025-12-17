@@ -6,6 +6,7 @@ simple calculator application for a webserver in go
 </p>
 
 - simple calculations (no exponents and stuff)
+- no negative numbers
 - basic calculator design with buttons (windows calculator as reference)
 - CI/CD with GitHub Actions (release-please)
 - containerization with docker and docker-compose
