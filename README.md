@@ -28,7 +28,7 @@ Test case:
 ```bash
 curl -X POST http://localhost:8080/calc \
   -H "Content-Type: application/json" \
-  -d '{"term": "2 + 3 * 4"}'
+  -d '{"term": "2+3*4"}'
 ```
 # Parser
 <i>Example: 2 3 4 * +</i><br>
