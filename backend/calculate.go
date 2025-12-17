@@ -15,11 +15,10 @@ func calculate(term string) string {
 	var result *big.Float
 
 	for i := 0; i < len(output); i++ {
-		if len(output) == 1 {
+		if len(output) == 1 && output[i] != "+" && output[i] != "-" && output[i] != "*" && output[i] != "/" {
 			return output[0]
-		}
-		//numbers get added to stack
-		if output[i] != "+" && output[i] != "-" && output[i] != "*" && output[i] != "/" {
+			//numbers get added to stack
+		} else if output[i] != "+" && output[i] != "-" && output[i] != "*" && output[i] != "/" {
 			stack = append(stack, output[i])
 
 			//set operator and calculate
