@@ -15,7 +15,7 @@ func calculate(term string) string {
 	var result *big.Float
 
 	for i := 0; i < len(output); i++ {
-		if len(output) == 1 && output[i] != "+" && output[i] != "-" && output[i] != "*" && output[i] != "/" {
+		if len(output) == 1 {
 			return output[0]
 			//numbers get added to stack
 		} else if output[i] != "+" && output[i] != "-" && output[i] != "*" && output[i] != "/" {
