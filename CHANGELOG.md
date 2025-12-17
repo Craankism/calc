@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.3](https://github.com/Craankism/calc/compare/v1.14.2...v1.14.3) (2025-12-17)
+
+
+### Bug Fixes
+
+* revising single-digit input and adding documentation ([#83](https://github.com/Craankism/calc/issues/83)) ([a059a6c](https://github.com/Craankism/calc/commit/a059a6cd87e68b0ee3a31522a4672b7f5d6ab016))
+
 ## [1.14.2](https://github.com/Craankism/calc/compare/v1.14.1...v1.14.2) (2025-12-10)
 
 
