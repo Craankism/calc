@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.4](https://github.com/Craankism/calc/compare/v1.14.3...v1.14.4) (2025-12-17)
+
+
+### Bug Fixes
+
+* stricter valid input patterns and removing unused code ([#86](https://github.com/Craankism/calc/issues/86)) ([fd71985](https://github.com/Craankism/calc/commit/fd719859d88a63e54a7e7a0e79be83547aa3da26))
+
 ## [1.14.3](https://github.com/Craankism/calc/compare/v1.14.2...v1.14.3) (2025-12-17)
 
 
