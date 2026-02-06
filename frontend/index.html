@@ -4,45 +4,42 @@
 <head>
   <title>simple calculator</title>
   <link rel="stylesheet" href="static/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
 
-<body>
-  <h1>
+<body class="flex-box">
+  <h2>
     Result =
-  </h1>
+  </h2>
   <form class="form" action="#">
     <input type="text" name="term">
   </form>
 
-  <button id="tech" type="button">PH</button>
-  <button id="tech" type="button"
-    onclick="document.querySelector('input[name=term]').value = ''; document.querySelector('h1').textContent = 'Result =';">C</button>
-  <button id="tech" type="button"
-    onclick="document.querySelector('input[name=term]').value = document.querySelector('input[name=term]').value.slice(0, -1)">&#9003</button>
-  <button id="tech" type="button" onclick="document.querySelector('input[name=term]').value += '/'">/</button>
-  <br>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '7'">7</button>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '8'">8</button>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '9'">9</button>
-  <button id="tech" type="button" onclick="document.querySelector('input[name=term]').value += '*'">*</button>
-  <br>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '4'">4</button>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '5'">5</button>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '6'">6</button>
-  <button id="tech" type="button" onclick="document.querySelector('input[name=term]').value += '-'">-</button>
-  <br>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '1'">1</button>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '2'">2</button>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '3'">3</button>
-  <button id="tech" type="button" onclick="document.querySelector('input[name=term]').value += '+'">+</button>
-  <br>
-  <button type="button">PH</button>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += '0'">0</button>
-  <button type="button" onclick="document.querySelector('input[name=term]').value += ','">,</button>
-  <button id="enter" type="submit"
-    onclick="document.querySelector('.form').dispatchEvent(new Event('submit'));">=</button>
-  <br>
-
+  <div class ="grid-box">
+    <button class="tech" type="button"></button>
+    <button class="tech" type="button"
+      onclick="document.querySelector('input[name=term]').value = ''; document.querySelector('h2').textContent = 'Result =';">C</button>
+    <button class="tech" type="button"
+      onclick="document.querySelector('input[name=term]').value = document.querySelector('input[name=term]').value.slice(0, -1)">&#9003</button>
+    <button class="tech" type="button" onclick="document.querySelector('input[name=term]').value += '/'">/</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '7'">7</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '8'">8</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '9'">9</button>
+    <button class="tech" type="button" onclick="document.querySelector('input[name=term]').value += '*'">*</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '4'">4</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '5'">5</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '6'">6</button>
+    <button class="tech" type="button" onclick="document.querySelector('input[name=term]').value += '-'">-</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '1'">1</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '2'">2</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '3'">3</button>
+    <button class="tech" type="button" onclick="document.querySelector('input[name=term]').value += '+'">+</button>
+    <button type="button"></button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += '0'">0</button>
+    <button type="button" onclick="document.querySelector('input[name=term]').value += ','">,</button>
+    <button id="enter" type="submit"
+      onclick="document.querySelector('.form').dispatchEvent(new Event('submit'));">=</button>
+</div>
 
 
   <script>
@@ -62,7 +59,7 @@
         body: JSON.stringify(data)
       }).then(res => res.json())
         .then(data => {
-          const resultEl = document.querySelector('h1');
+          const resultEl = document.querySelector('h2');
           const result = data && (data.result || data.value || JSON.stringify(data));
           resultEl.textContent = 'Result = ' + result;
         });

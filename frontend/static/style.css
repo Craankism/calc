@@ -1,33 +1,79 @@
-/*Background Color */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #000000;
     color: #ffffff;
-    text-align: center;
-    position: relative;
-    top: 300px;
+    justify-content: center;
+    justify-items: center;
 }
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    justify-items: center;
+}
+
 input {
-    width: 260px;
+    width: 80vw;
+    margin: 2vw 0vw 2vw 0vw;
+    font-size: 4vh;
+}
+
+h2 {
+    font-size: 6vw;
 }
 
 button {
     border: none;
     color: rgb(0, 0, 0);
-    padding: none;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 6vw;
     cursor: pointer;
-    width: 60px;
-    height: 60px;
+    width: 20vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
 }
 
-#tech {
+button:hover {
+    background-color: rgba(255, 253, 253, 0.527);
+}
+
+.tech {
     background-color: rgb(167, 167, 167);
 }
 
 #enter {
     background-color: rgb(255, 128, 128);
+}
+
+#enter:hover {
+    background-color: rgb(246, 28, 28);
+}
+
+@media (min-width: 481px) {
+    h2 {
+        font-size: 4vw;
+    }
+    input {
+        width: 32vw;
+    }
+
+    button {
+        width: 8vw;
+        font-size: 4vw;
+    }
 }
