@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/craankism/calc/compare/v1.14.4...v1.15.0) (2026-02-06)
+
+
+### Features
+
+* mobile compatibility with flex and grid ([#88](https://github.com/craankism/calc/issues/88)) ([bd32ce0](https://github.com/craankism/calc/commit/bd32ce0beecbfa1e26518767f85e9f8b42315aa1))
+
 ## [1.14.4](https://github.com/Craankism/calc/compare/v1.14.3...v1.14.4) (2025-12-17)
 
 
