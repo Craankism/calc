@@ -3,37 +3,64 @@
     padding: 0;
 }
 
-body {
+html {
     background-color: #000000;
     color: #ffffff;
-    justify-content: center;
-    justify-items: center;
 }
 
 .flex-box {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    width: 100vw;
     height: 100vh;
-}
-
-.grid-box {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
-    justify-items: center;
-}
-
-input {
-    width: 80vw;
-    margin: 2vw 0vw 2vw 0vw;
-    font-size: 4vh;
+    width: 100vw;
 }
 
 h2 {
+    order: 0;
+    flex: 1;
+    width: 90%;
+    height: 30%;
+    max-width: 100%;
+    font-size: 8vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow-wrap: anywhere;
+}
+
+.form {
+    order: 1;
+    width: 99%;
+}
+
+.form input {
+    margin-left: 5%;
+    width: 90%;
+    height: 100%;
+    font-size: 12vw;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    text-align: right;
+}
+
+.form input.input--small {
+    font-size: 8vw;
+}
+
+.form input.input--smaller {
     font-size: 6vw;
+}
+
+.keyboard {
+    order: 2;
+    display: grid;
+    width: 90%;
+    grid-template-columns: minmax(25%, 1fr) minmax(25%, 1fr) minmax(25%, 1fr) minmax(25%, 1fr);
+    grid-template-rows: minmax(5vh, 1fr) minmax(5vh, 1fr) minmax(5vh, 1fr) minmax(5vh, 1fr) minmax(5vh, 1fr);
+    margin-bottom: 5%;
 }
 
 button {
@@ -41,15 +68,11 @@ button {
     color: rgb(0, 0, 0);
     text-align: center;
     text-decoration: none;
-    font-size: 6vw;
     cursor: pointer;
-    width: 20vw;
-    height: auto;
-    aspect-ratio: 1 / 1;
-}
-
-button:hover {
-    background-color: rgba(255, 253, 253, 0.527);
+    border-radius: 30%;
+    font-size: 5vw;
+    margin: 5%;
+    aspect-ratio: 1 /1;
 }
 
 .tech {
@@ -60,20 +83,52 @@ button:hover {
     background-color: rgb(255, 128, 128);
 }
 
-#enter:hover {
-    background-color: rgb(246, 28, 28);
-}
-
 @media (min-width: 481px) {
-    h2 {
-        font-size: 4vw;
+    
+    .flex-box {
+        justify-content: center;
     }
-    input {
-        width: 32vw;
+
+    h2 {
+        font-size: 2vw;
+        width: 30%;
+        overflow-wrap: hidden;
+    }
+
+    .form {
+        width: 30%;
+        text-align: right;
+    }
+
+    .form input {
+        font-size: 3.7vw;
+        margin-left: 0;
+    }
+
+    .form input.input--small {
+        font-size: 2.4vw;
+    }
+
+    .form input.input--smaller {
+        font-size: 1.8vw;
+    }
+
+    .keyboard {
+        width: 30%;
+        margin-bottom: 0;
     }
 
     button {
-        width: 8vw;
-        font-size: 4vw;
+        aspect-ratio: 1 /1;
+        flex: 1;
+        font-size: 2vw;
+    }
+
+    button:hover {
+        background-color: rgba(255, 253, 253, 0.527);
+    }
+
+    #enter:hover {
+        background-color: rgb(246, 28, 28);
     }
 }

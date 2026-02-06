@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/craankism/calc/compare/v1.15.0...v1.15.1) (2026-02-06)
+
+
+### Bug Fixes
+
+* better responsive design compatibility ([#90](https://github.com/craankism/calc/issues/90)) ([19aa0f7](https://github.com/craankism/calc/commit/19aa0f7be89fad3b4e8bec2ea2a5dc0dda427e2b))
+
 ## [1.15.0](https://github.com/craankism/calc/compare/v1.14.4...v1.15.0) (2026-02-06)
 
 
