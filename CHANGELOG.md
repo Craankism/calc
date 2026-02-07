@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.2](https://github.com/craankism/calc/compare/v1.15.1...v1.15.2) (2026-02-07)
+
+
+### Bug Fixes
+
+* add / to valid Pattern ([#93](https://github.com/craankism/calc/issues/93)) ([ddff2d2](https://github.com/craankism/calc/commit/ddff2d236aa2bf8804e7a825d87f85d7255cc82e))
+
 ## [1.15.1](https://github.com/craankism/calc/compare/v1.15.0...v1.15.1) (2026-02-06)
 
 
